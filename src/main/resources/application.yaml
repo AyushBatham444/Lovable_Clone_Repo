@@ -1,0 +1,53 @@
+spring:
+  application:
+    name: lovable-clone
+  datasource:
+    url: jdbc:postgresql://localhost:9020/pgvector-test
+    username: user
+    password: password
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update  # options: none, validate, update, create, create-drop # if any change in schema then application will be auto updated with it
+    show-sql: true       # shows SQL queries in console
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect # so that hibernate query be converted to postgre dilects
+        format_sql: false
+        jdbc:
+          time_zone: UTC
+  ai:
+    openai:
+      api-key:
+      base-url: https://openrouter.ai/api
+      chat:
+        options:
+          model:     openai/gpt-5.2-codex #deepseek/deepseek-v3.2 #x-ai/grok-code-fast-1
+          temperature: 0.0 # 0 as for coding i want it to the point
+
+
+server:
+  port: 9090  # changed from default 8080 to avoid conflict
+
+jwt:
+  secret-key: shkjshkfhdsjfhshflsdhflsdhfsdhfskjhdflshjskdhfsjhvbv84kbskbdsjbdsjbbvds
+
+stripe:
+  api:
+    secret:
+  webhook:
+    secret: whsec_0f09edf97410713787ad61952016ffc8e48814e8a5da99cdbd1f50c6a436bad7
+
+client.url: http://localhost:9090
+
+logging:
+  level:
+    org.springframework.ai:
+      chat.client: DEBUG
+
+minio:
+  url: http://localhost:9100
+  access-key: minioadmin
+  secret-key: minioadmin123
+  project-bucket: projects

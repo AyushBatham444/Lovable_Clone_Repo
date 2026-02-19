@@ -1,0 +1,13 @@
+package com.project.demo.errors;
+
+import lombok.AccessLevel;
+import lombok.Getter;
+import lombok.RequiredArgsConstructor;
+import lombok.experimental.FieldDefaults;
+
+@Getter // to send this message
+@RequiredArgsConstructor
+@FieldDefaults(makeFinal = true,level = AccessLevel.PRIVATE)
+public class BadRequestException extends RuntimeException{
+    String message;
+}
