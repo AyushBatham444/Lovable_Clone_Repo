@@ -19,7 +19,7 @@ spring:
           time_zone: UTC
   ai:
     openai:
-      api-key:
+      api-key: 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
       base-url: https://openrouter.ai/api
       chat:
         options:
@@ -31,7 +31,7 @@ server:
   port: 9090  # changed from default 8080 to avoid conflict
 
 jwt:
-  secret-key: shkjshkfhdsjfhshflsdhflsdhfsdhfskjhdflshjskdhfsjhvbv84kbskbdsjbdsjbbvds
+  secret-key:
 
 stripe:
   api:
@@ -47,7 +47,7 @@ logging:
       chat.client: DEBUG
 
 minio:
-  url: http://localhost:9100
+  url: http://localhost:9000
   access-key: minioadmin
   secret-key: minioadmin123
   project-bucket: projects

@@ -34,7 +34,7 @@ public class KubernetesDeploymentService implements DeploymentService {
     @Override
     public DeployResponse deploy(Long projectId) {
 
-        String domain = "project-" + projectId + ".app.domain.com";
+        String domain = "project-" + projectId + ".app.domain.com"; // write name of the domain you bought
 
         Pod existingPod=findActivePod(projectId); // if a pod is already running with a preview and you fetched it again then use existing one only else create new ones
 

@@ -5,8 +5,8 @@ metadata:
   namespace: shuttle-apps
 spec:
   type: ExternalName
-  externalName: host.docker.internal  # Points to your laptop/host machine (Docker Desktop)
-  ports:
-    - port: 9100        # Port exposed inside Kubernetes
-      targetPort: 9000  # Default MinIO port running on Docker
-      protocol: TCP
+  externalName: minio-lovable # Points to your laptop/host
+#  ports:
+#    - port: 9000
+#      targetPort: 9000
+#      protocol: TCP
