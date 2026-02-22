@@ -17,9 +17,15 @@ spring:
         format_sql: false
         jdbc:
           time_zone: UTC
+
+  data:
+    redis:
+      host: localhost
+      port: 6379
+
   ai:
     openai:
-      api-key: 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
+      api-key:
       base-url: https://openrouter.ai/api
       chat:
         options:
@@ -31,7 +37,7 @@ server:
   port: 9090  # changed from default 8080 to avoid conflict
 
 jwt:
-  secret-key:
+  secret-key: shkjshkfhdsjfhshflsdhflsdhfsdhfskjhdflshjskdhfsjhvbv84kbskbdsjbdsjbbvds
 
 stripe:
   api:
